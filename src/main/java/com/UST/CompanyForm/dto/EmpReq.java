@@ -17,8 +17,6 @@ import javax.validation.constraints.Size;
 public class EmpReq {
         @Id
         @GeneratedValue
-        @NotBlank(message="Id required")
-        public Long id;
         @NotNull(message="Name required")
         @Size(min=5,max=20)
         public String name;

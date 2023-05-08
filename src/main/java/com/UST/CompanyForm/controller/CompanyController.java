@@ -25,7 +25,7 @@ public class CompanyController {
     private ManagerRepo repo2;
     @PostMapping("/postemp")
     public ResponseEntity<Employee> emppost(@RequestBody @Valid EmpReq emp){
-        Employee eep=new Employee(emp.getId(),emp.getName(),emp.getDept());
+        Employee eep=new Employee(0L,emp.getName(),emp.getDept());
         repo1.save(eep);
         return ResponseEntity.ok().body(eep);
     }
